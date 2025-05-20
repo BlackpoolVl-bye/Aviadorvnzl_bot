@@ -1,0 +1,7 @@
+{
+  "event": "crash",
+  "data": {
+    "crash_point": 2.45,
+    "round_id": "123456"
+  }
+}
