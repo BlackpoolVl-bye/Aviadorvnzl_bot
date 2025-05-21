@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  aviator-bot:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - ./data:/data
+    environment:
+      - TELEGRAM_TOKEN=8003841250:AAHhSeVuAvuPYpOzucRZMgu8xoAz9x-TadM
+      - CHAT_ID=1985047351
+      - PREDICTION_THRESHOLD=2.0
+      - WS_URL=wss://cf.1win.direct/v4/socket.io/?Language=es&xorigin=1win.com&EIO=4&transport=websocket
