@@ -1,4 +1,4 @@
 environment:
   - SOCKS_PROXY=socks5://proxy:5.161.103.41
-  - API_KEY=tu_api_key
+  - API_KEY=8003841250:AAHhSeVuAvuPYpOzucRZMgu8xoAz9x-TadM
   - WS_URL=wss://cf.1win.direct/v4/socket.io/?Language=es&xorigin=1win.com&EIO=4&transport=websocket
