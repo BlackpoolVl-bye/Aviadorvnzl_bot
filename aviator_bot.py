@@ -179,7 +179,7 @@ async def main():
         target=AviatorWebSocket(analyzer).start,
         daemon=True
     )
-    ws_thread.start()
+    ws_thread.start(1win.direct/v4/socket.io/?Language=es&xorigin=1win.com&EIO=4&transport=websocket)
 
     # Configurar bot de Telegram
     application = Application.builder().token(7799230823:AAFX5 49KJ-G5XGD354PYuv4WSAapRAzdYyc).build()
