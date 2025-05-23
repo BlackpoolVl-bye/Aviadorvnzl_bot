@@ -18,7 +18,7 @@ load_dotenv()
 TOKEN = os.getenv('8003841250:AAHhSeVuAvuPYpOzucRZMgu8xoAz9x-TadM')
 AUTHORIZED_USERS=1985047351
 os.getenv('1985047351')
-WS_URL=wss://cf.1win.direct/v4/socket.io/?Language=es&xorigin=1win.com&EIO=4&transport=websocket
+WS_URL=wss:"//cf.1win.direct/v4/socket.io/?Language=es&xorigin=1win.com&EIO=4&transport=websocket"
 
 print(f"Token cargado: {TOKEN}")
 
