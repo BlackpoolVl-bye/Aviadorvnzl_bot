@@ -12,14 +12,9 @@ import telegram
 from telegram.ext import Application, CommandHandler
 
 # --- Configuración Inicial ---
-# Carga variables de entorno desde archivo.env
-load_dotenv()
+load_dotenv()\
 
 TOKEN = os.getenv('8003841250:AAHhSeVuAvuPYpOzucRZMgu8xoAz9x-TadM')
-AUTHORIZED_USERS=1985047351
-os.getenv('1985047351')
-WS_URL=wss://cf.1win.direct/v4/socket.io/?Language=es&xorigin=1win.com&EIO=4&transport=websocket
-
 print(f"Token cargado: {TOKEN}")
 
 # Configuración de logging
@@ -35,6 +30,16 @@ logger = logging.getLogger(__name__)
 
 # --- Constantes ---
 class Config:
+# --- Clase de configuración (evita errores de variables no definidas) ---
+    TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
+    if not TELEGRAM_TOKEN:
+        raise ValueError("❌ TELEGRAM_TOKEN no está definido en .env")
+    
+    CHAT_ID = os.getenv('CHAT_ID')
+    if not CHAT_ID:
+        raise ValueError("❌ CHAT_ID no está definido en .env")
+
+
     TELEGRAM_TOKEN = os.getenv('8003841250:AAHhSeVuAvuPYpOzucRZMgu8xoAz9x-TadM')
     CHAT_ID = os.getenv('1985047351')
     WS_URL = os.getenv('WS_URL', 'wss://cf.1win.direct/v4/socket.io/?Language=es&xorigin=1win.com&EIO=4&transport=websocket')
@@ -44,7 +49,7 @@ class Config:
 
 # --- Clases Principales ---
 class AviatorAnalyzer:
-    def _init_(self):
+    def init(self):
         self.historical_data = []
         self.last_alert = None
 
@@ -84,7 +89,7 @@ class AviatorAnalyzer:
             logger.error(f"Error guardando CSV: {e}")
 
 class AviatorWebSocket:
-    def _init_(self, analyzer):
+    def init(self, analyzer):
         self.analyzer = analyzer
         self.ws = None
         self.reconnect_delay = 5
@@ -134,7 +139,7 @@ class AviatorWebSocket:
         logger.info("Conexión WS establecida")
 
 class TelegramBot:
-    bot = telegram.Bot(token="8003841250:AAHhSeVuAvuPYpOzucRZMgu8xoAz9x-TadM")
+    bot = telegram.Bot(token=Config.TELEGRAM_TOKEN)
 
     @classmethod
     async def send_alert(cls, message):

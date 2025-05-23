@@ -1,3 +1,12 @@
+version: '3.8'
+
+services:
+  aviator_bot:
+    build: .
+    env_file:
+      - archivo.env
+    restart: always
+
 environment:
   - SOCKS_PROXY=socks5://192.252.216.81:4145
   - API_KEY=8003841250:AAHhSeVuAvuPYpOzucRZMgu8xoAz9x-TadM
