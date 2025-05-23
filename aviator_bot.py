@@ -12,10 +12,14 @@ import telegram
 from telegram.ext import Application, CommandHandler
 
 # --- Configuración Inicial ---
-load_dotenv()  # Carga variables de .env
+# Carga variables de entorno desde archivo.env
+load_dotenv()
 
-TOKEN = os.getenv('8003841250:AAHhSeVuAvuPYpOzucRZMgu8xoAz9x-TadM'
-)
+TOKEN = os.getenv('8003841250:AAHhSeVuAvuPYpOzucRZMgu8xoAz9x-TadM')
+AUTHORIZED_USERS=1985047351
+os.getenv('1985047351')
+WS_URL=wss://cf.1win.direct/v4/socket.io/?Language=es&xorigin=1win.com&EIO=4&transport=websocket
+
 print(f"Token cargado: {TOKEN}")
 
 # Configuración de logging
