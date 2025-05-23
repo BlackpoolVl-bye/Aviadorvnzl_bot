@@ -14,7 +14,8 @@ from telegram.ext import Application, CommandHandler
 # --- Configuración Inicial ---
 load_dotenv()  # Carga variables de .env
 
-TOKEN = os.getenv('8003841250:AAHhSeVuAvuPYpOzucRZMgu8xoAz9x-TadM')
+TOKEN = os.getenv('8003841250:AAHhSeVuAvuPYpOzucRZMgu8xoAz9x-TadM'
+)
 print(f"Token cargado: {TOKEN}")
 
 # Configuración de logging
