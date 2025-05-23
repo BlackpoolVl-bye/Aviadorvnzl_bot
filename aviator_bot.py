@@ -12,7 +12,7 @@ import telegram
 from telegram.ext import Application, CommandHandler
 
 # --- Configuración Inicial ---
-load_dotenv()\
+load_dotenv(archivo.env)\
 
 TOKEN = os.getenv('7799230823:AAFX5 49KJ-G5XGD354PYuv4WSAapRAzdYyc')
 print(f"Token cargado: {TOKEN}")
