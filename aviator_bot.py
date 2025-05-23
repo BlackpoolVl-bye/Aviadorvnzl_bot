@@ -130,7 +130,7 @@ class AviatorWebSocket:
         logger.info("Conexión WS establecida")
 
 class TelegramBot:
-    bot = telegram.Bot(token=Config.TELEGRAM_TOKEN)
+    bot = telegram.Bot(token="8003841250:AAHhSeVuAvuPYpOzucRZMgu8xoAz9x-TadM")
 
     @classmethod
     async def send_alert(cls, message):
