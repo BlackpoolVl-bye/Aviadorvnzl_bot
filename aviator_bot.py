@@ -13,7 +13,7 @@ from telegram.ext import Application, CommandHandler
 
 # --- Configuración Inicial ---
 load_dotenv()
-# Carga variables de entorno desde archivo.env
+# Carga variables de entorno desde.env
 
 TOKEN="8003841250:AAHhSeVuAvuPYpOzucRZMgu8xoAz9x-TadM"
 os.getenv('8003841250:AAHhSeVuAvuPYpOzucRZMgu8xoAz9x-TadM')
