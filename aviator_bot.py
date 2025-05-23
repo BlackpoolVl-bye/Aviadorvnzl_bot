@@ -33,7 +33,7 @@ class Config:
 
 TELEGRAM_TOKEN = os.getenv('7799230823:AAFX5 49KJ-G5XGD354PYuv4WSAapRAzdYyc')
     CHAT_ID = os.getenv('1985047351')
-    WS_URL = os.getenv('WS_URL', 'wss://cf.1win.direct/v4/socket.io/?Language=es&xorigin=1win.com&EIO=4&transport=websocket')
+    WS_URL = os.getenv('WS_URL', "wss://cf.1win.direct/v4/socket.io/?Language=es&xorigin=1win.com&EIO=4&transport=websocket")
     SOCKS_PROXY = os.getenv('socks5://192.252.216.81:4145')  # Ej: 127.0.0.1:9050
     PREDICTION_THRESHOLD = float(os.getenv('PREDICTION_THRESHOLD', 2.0))
     API_KEY = os.getenv('7799230823:AAFX5 49KJ-G5XGD354PYuv4WSAapRAzdYyc')
@@ -179,7 +179,7 @@ async def main():
         target=AviatorWebSocket(analyzer).start,
         daemon=True
     )
-    ws_thread.start(1win.direct/v4/socket.io/?Language=es&xorigin=1win.com&EIO=4&transport=websocket)
+    ws_thread.start("1win.direct/v4/socket.io/?Language=es&xorigin=1win.com&EIO=4&transport=websocket")
 
     # Configurar bot de Telegram
     application = Application.builder().token(7799230823:AAFX5 49KJ-G5XGD354PYuv4WSAapRAzdYyc).build()
