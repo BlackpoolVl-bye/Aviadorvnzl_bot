@@ -14,7 +14,7 @@ from telegram.ext import Application, CommandHandler
 # --- Configuración Inicial ---
 load_dotenv()\
 
-TOKEN = os.getenv('8003841250:AAHhSeVuAvuPYpOzucRZMgu8xoAz9x-TadM')
+TOKEN = os.getenv('7799230823:AAFX5 49KJ-G5XGD354PYuv4WSAapRAzdYyc')
 print(f"Token cargado: {TOKEN}")
 
 # Configuración de logging
@@ -30,22 +30,13 @@ logger = logging.getLogger(__name__)
 
 # --- Constantes ---
 class Config:
-# --- Clase de configuración (evita errores de variables no definidas) ---
-    TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
-    if not TELEGRAM_TOKEN:
-        raise ValueError("❌ TELEGRAM_TOKEN no está definido en .env")
-    
-    CHAT_ID = os.getenv('CHAT_ID')
-    if not CHAT_ID:
-        raise ValueError("❌ CHAT_ID no está definido en .env")
 
-
-    TELEGRAM_TOKEN = os.getenv('8003841250:AAHhSeVuAvuPYpOzucRZMgu8xoAz9x-TadM')
+TELEGRAM_TOKEN = os.getenv('7799230823:AAFX5 49KJ-G5XGD354PYuv4WSAapRAzdYyc')
     CHAT_ID = os.getenv('1985047351')
     WS_URL = os.getenv('WS_URL', 'wss://cf.1win.direct/v4/socket.io/?Language=es&xorigin=1win.com&EIO=4&transport=websocket')
     SOCKS_PROXY = os.getenv('socks5://192.252.216.81:4145')  # Ej: 127.0.0.1:9050
     PREDICTION_THRESHOLD = float(os.getenv('PREDICTION_THRESHOLD', 2.0))
-    API_KEY = os.getenv('8003841250:AAHhSeVuAvuPYpOzucRZMgu8xoAz9x-TadM')
+    API_KEY = os.getenv('7799230823:AAFX5 49KJ-G5XGD354PYuv4WSAapRAzdYyc')
 
 # --- Clases Principales ---
 class AviatorAnalyzer:
@@ -191,7 +182,7 @@ async def main():
     ws_thread.start()
 
     # Configurar bot de Telegram
-    application = Application.builder().token(Config.TELEGRAM_TOKEN).build()
+    application = Application.builder().token(7799230823:AAFX5 49KJ-G5XGD354PYuv4WSAapRAzdYyc).build()
     application.add_handler(CommandHandler("start", TelegramBot.start))
     application.add_handler(CommandHandler("estadisticas", TelegramBot.stats))
     
