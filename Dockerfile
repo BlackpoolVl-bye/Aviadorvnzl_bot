@@ -22,6 +22,7 @@ VOLUME /data
 # Variables de entorno
 ENV PYTHONUNBUFFERED=1
 ENV TELEGRAM_TOKEN="8003841250:AAHhSeVuAvuPYpOzucRZMgu8xoAz9x-TadM"
+
 ENV CHAT_ID="1985047351"
 ENV WS_URL="wss://cf.1win.direct/v4/socket.io/?Language=es&xorigin=1win.com&EIO=4&transport=websocket"
 ENV SOCKS_PROXY="socks5://192.252.216.81:4145"
