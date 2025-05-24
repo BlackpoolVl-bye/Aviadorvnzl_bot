@@ -1,4 +1,5 @@
-python-telegram-bot==20.3
+pyTelegramBotAPI==4.12.0
+beautifulsoup4==4.12.0
+requests==2.31.0
 websocket-client==1.6.1
-pandas==2.0.3
-python-dotenv==1.0.0
+python-dotentv==1.0.0
