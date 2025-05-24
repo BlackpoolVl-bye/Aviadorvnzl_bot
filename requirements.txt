@@ -3,3 +3,5 @@ beautifulsoup4==4.12.0
 requests==2.31.0
 websocket-client==1.6.1
 python-dotentv==1.0.0
+playwright
+python-telegram-bot==20.0
